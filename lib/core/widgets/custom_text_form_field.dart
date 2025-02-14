@@ -85,14 +85,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       textInputAction: widget.nextFocus == null
           ? TextInputAction.done
           : TextInputAction.next,
-      validator: (value) {
-        if (widget.validation == null) {
-          setState(() => errorText = null);
-        } else {
-          setState(() => errorText = widget.validation!(value));
-        }
-        return errorText;
-      },
+      validator: widget.validation,
       decoration: InputDecoration(
         contentPadding: EdgeInsets.all(Insets.s16),
         hintText: widget.hint,
@@ -141,7 +134,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             color: ColorManager.mediumGray,
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(4.r),
+          borderRadius: BorderRadius.circular(15.r),
         ),
         errorBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -149,7 +142,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             color: ColorManager.red,
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(4.r),
+          borderRadius: BorderRadius.circular(15.r),
         ),
         focusedBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -157,7 +150,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             color: errorText != null ? ColorManager.red : ColorManager.blue,
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(4.r),
+          borderRadius: BorderRadius.circular(15.r),
         ),
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
@@ -165,7 +158,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             color: ColorManager.mediumGray,
             width: 1,
           ),
-          borderRadius: BorderRadius.circular(4.r),
+          borderRadius: BorderRadius.circular(15.r),
         ),
         errorStyle: getRegularStyle(
           color: ColorManager.red,

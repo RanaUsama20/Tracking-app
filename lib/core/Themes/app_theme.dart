@@ -20,6 +20,12 @@ class AppTheme {
           ),
         ),
     textTheme: TextTheme(
+      titleLarge:getBoldStyle(
+          color: ColorManager.steelBlue,
+          fontSize: FontSize.s30,
+          fontFamily: AppConstants.inter,
+          context: context
+      ) ,
       titleMedium: getBoldStyle(
           color: ColorManager.darkGray,
           fontSize: FontSize.s18,
