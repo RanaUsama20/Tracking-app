@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tracking_app/core/routes/routes.dart';
+import 'package:tracking_app/ui/view/auth/screens/home_screen.dart';
 import '../../ui/view/auth/screens/login_screen.dart';
 import '../../ui/view/auth/screens/register_screen.dart';
 
@@ -11,6 +12,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const LoginScreen());
       case Routes.register:
         return MaterialPageRoute(builder: (_) => const RegisterScreen());
+      case Routes.home:
+        return MaterialPageRoute(builder: (_) => const HomeScreen());
       default:
         return _undefinedRoute();
     }

@@ -38,7 +38,7 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       style: ElevatedButton.styleFrom(
-        elevation: elevation, // 👈 Add this
+        elevation: elevation,
         padding: EdgeInsets.symmetric(
             horizontal: Insets.s14.w, vertical: Insets.s14.h),
         shape: isStadiumBorder
@@ -46,9 +46,9 @@ class CustomButton extends StatelessWidget {
             : RoundedRectangleBorder(
                 borderRadius: borderRadius ?? BorderRadius.circular(100.r),
               ),
-        backgroundColor: backgroundColor ?? ColorManager.blue,
+        backgroundColor: backgroundColor ?? ColorManager.steelBlue,
         tapTargetSize: MaterialTapTargetSize.shrinkWrap,
-        fixedSize: fixedSize ?? Size(double.infinity, 48.h),
+        fixedSize: fixedSize ?? Size(double.infinity, 58.h),
       ),
       onPressed: onTap,
       child: Row(
@@ -66,9 +66,9 @@ class CustomButton extends StatelessWidget {
                 getMediumStyle(
                   color: ColorManager.pureWhite,
                   context: context,
-                  fontSize: FontSize.s16,
+                  fontSize: FontSize.s20,
                   fontFamily: AppConstants.roboto,
-                ).copyWith(fontSize: FontSize.s16),
+                ).copyWith(fontSize: FontSize.s20),
           ),
           suffixIcon != null
               ? SizedBox(
