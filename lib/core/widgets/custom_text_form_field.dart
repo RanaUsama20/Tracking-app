@@ -65,7 +65,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
       readOnly: widget.readOnly,
       autovalidateMode: widget.autoValidateMode,
       style: getBoldStyle(
-        color: ColorManager.darkGray,
+        color: ColorManager.skyBlue,
         context: context,
         fontSize: FontSize.s16,
         fontFamily: AppConstants.roboto,
@@ -94,7 +94,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
             getRegularStyle(
               color: errorText != null
                   ? ColorManager.red
-                  : ColorManager.mediumGray,
+                  : ColorManager.skyBlue,
               context: context,
               fontFamily: AppConstants.roboto,
               fontSize: FontSize.s12,
@@ -112,11 +112,11 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
                   color: widget.cursorColor,
                   selectedIcon: Icon(
                     Icons.visibility_off_outlined,
-                    color: ColorManager.mediumGray,
+                    color: ColorManager.skyBlue,
                   ),
                   icon: Icon(
                     Icons.remove_red_eye_outlined,
-                    color: ColorManager.mediumGray,
+                    color: ColorManager.skyBlue,
                   ),
                 ),
               )
@@ -131,7 +131,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         border: OutlineInputBorder(
           borderSide: BorderSide(
             strokeAlign: BorderSide.strokeAlignInside,
-            color: ColorManager.mediumGray,
+            color: ColorManager.skyBlue,
             width: 1,
           ),
           borderRadius: BorderRadius.circular(15.r),
@@ -155,7 +155,7 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         enabledBorder: OutlineInputBorder(
           borderSide: BorderSide(
             strokeAlign: BorderSide.strokeAlignInside,
-            color: ColorManager.mediumGray,
+            color: ColorManager.skyBlue,
             width: 1,
           ),
           borderRadius: BorderRadius.circular(15.r),

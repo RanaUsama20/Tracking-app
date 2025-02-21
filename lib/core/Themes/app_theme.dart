@@ -6,14 +6,14 @@ import '../resources/values_manager.dart';
 
 class AppTheme {
   static ThemeData lightTheme(BuildContext context) => ThemeData(
-        scaffoldBackgroundColor: ColorManager.lightGray,
+        scaffoldBackgroundColor: ColorManager.deepSea,
         primaryColor: ColorManager.blue,
         appBarTheme: AppBarTheme(
           centerTitle: false,
-          backgroundColor: ColorManager.lightGray,
+          backgroundColor: ColorManager.deepSea,
           elevation: 0,
           titleTextStyle: getBoldStyle(
-            color: ColorManager.darkGray,
+            color: ColorManager.skyBlue,
             fontSize: FontSize.s20,
             fontFamily: AppConstants.inter,
             context: context,
@@ -21,19 +21,19 @@ class AppTheme {
         ),
     textTheme: TextTheme(
       titleLarge:getBoldStyle(
-          color: ColorManager.steelBlue,
+          color: ColorManager.skyBlue,
           fontSize: FontSize.s30,
           fontFamily: AppConstants.inter,
           context: context
       ) ,
       titleMedium: getBoldStyle(
-          color: ColorManager.darkGray,
+          color: ColorManager.skyBlue,
           fontSize: FontSize.s18,
           fontFamily: AppConstants.inter,
           context: context
       ),
       titleSmall: getRegularStyle(
-          color: ColorManager.mediumGray,
+          color: ColorManager.skyBlue,
           fontSize: FontSize.s14,
           fontFamily: AppConstants.inter,
           context: context)

@@ -5,15 +5,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get_it/get_it.dart';
 import 'package:tracking_app/core/di/service_locator.config.dart';
-import 'package:tracking_app/core/di/service_locator.dart';
-import 'package:tracking_app/ui/view_model/cubit/auth/auth_cubit.dart';
 import 'core/Themes/app_theme.dart';
 import 'core/resources/values_manager.dart';
 import 'core/routes/route_generator.dart';
 import 'core/routes/routes.dart';
 import 'core/utils/bloc_observer.dart';
 import 'package:firebase_core/firebase_core.dart';
-import 'domain/use_case/auth/login_usecase.dart';
 import 'firebase_options.dart';
 
 
@@ -29,7 +26,8 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
     await GetIt.instance.init();
 
-  runApp(EasyLocalization(
+  runApp(
+    EasyLocalization(
     supportedLocales: AppConstants.supportedLocales,
     fallbackLocale: AppConstants.englishLocale,
     path: AppConstants.pathTranslation,
@@ -51,7 +49,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme(context),
         onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.register,
+        initialRoute: Routes.login,
       ),
     );
   }
