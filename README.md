@@ -29,7 +29,7 @@ https://drive.google.com/drive/folders/1wjTa-hM-LqRRgQnN1d45woQPxo-kUnHb?usp=sha
 <img src="4.png" width="200">
 <img src="5.png" width="200">
 <img src="1.jpg" width="200">
-<img src="2.ipg" width="200">
+<img src="2.jpg" width="200">
 
 
 </p>
