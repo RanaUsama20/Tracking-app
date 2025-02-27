@@ -43,7 +43,7 @@ class ColorManager {
   static const Color cobaltBlue = Color(0xFF5679BD);
   static const Color deepOcean = Color(0xFF2C58AC);
   static const Color navyBlue = Color(0xFF022D82);
-  static const Color darkNavy = Color(0xFF012468);
+  static const Color darkNavy = Color(0xFF000425);
   static const Color midnightBlue = Color(0xFF011B4E);
   static const Color deepSea = Color(0xFF011234);
   static const Color abyssBlue = Color(0xFF000B1F);
