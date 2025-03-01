@@ -11,6 +11,7 @@ import 'package:tracking_app/domain/use_case/auth/register_usecase.dart';
 import 'package:tracking_app/ui/view_model/cubit/auth/auth_states.dart';
 import '../../../../core/routes/routes.dart';
 import '../../../../core/utils/validator.dart';
+import '../../../../generated/locale_keys.g.dart';
 import '../../../view_model/cubit/auth/auth_cubit.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -56,7 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   children: [
                     SizedBox(height: 100.h),
                     Text(
-                      'Sign Up',
+                      LocaleKeys.signUp.tr(),
                       style: Theme.of(context).textTheme.titleLarge,
                       textAlign: TextAlign.center,
                     ),
@@ -67,10 +68,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           children: [
                             CustomTextFormField(
                               controller: _nameController,
-                              label: 'Name'.tr(),
+                              label: LocaleKeys.name.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Enter your Name'.tr(),
+                              hint: LocaleKeys.enterYourName.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               validation: (val) => Validator.validateName(val),
@@ -82,10 +83,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             CustomTextFormField(
                               controller: _emailController,
-                              label: 'Email'.tr(),
+                              label: LocaleKeys.email.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Enter your email'.tr(),
+                              hint: LocaleKeys.enterYourEmail.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               validation: (val) => Validator.validateEmail(val),
@@ -97,10 +98,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             CustomTextFormField(
                               controller: _passwordController,
-                              label: 'Password'.tr(),
+                              label: LocaleKeys.password.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Enter your password'.tr(),
+                              hint: LocaleKeys.enterYourPassword.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               isObscured: true,
@@ -114,10 +115,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             CustomTextFormField(
                               controller: _confirmPasswordController,
-                              label: 'Confirm password'.tr(),
+                              label: LocaleKeys.confirmPassword.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Confirm password'.tr(),
+                              hint: LocaleKeys.confirmPassword.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               isObscured: true,
@@ -132,10 +133,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             CustomTextFormField(
                               controller: _ageController,
-                              label: 'Age'.tr(),
+                              label: LocaleKeys.age.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Enter your Age'.tr(),
+                              hint: LocaleKeys.age.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               validation: (val) => Validator.validateAge(val),
@@ -147,10 +148,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                             ),
                             CustomTextFormField(
                               controller: _phoneNumberController,
-                              label: 'Phone number'.tr(),
+                              label: LocaleKeys.phoneNumber.tr(),
                               labelTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
-                              hint: 'Enter your Phone number'.tr(),
+                              hint: LocaleKeys.enterYourPhoneNumber.tr(),
                               hintTextStyle:
                                   Theme.of(context).textTheme.titleSmall,
                               validation: (val) =>
@@ -166,7 +167,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Padding(
                       padding: EdgeInsets.all(10),
                       child: CustomButton(
-                          label: 'sign up'.tr(),
+                          label: LocaleKeys.signUp.tr(),
                           onTap: () {
                             if (_formKey.currentState!.validate()) {
                               cubit.register(
@@ -185,7 +186,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
                           Text(
-                            'Already have an account?  ',
+                            LocaleKeys.haveAnAccount.tr(),
                             style: Theme.of(context).textTheme.titleMedium,
                           ),
                           InkWell(
@@ -193,7 +194,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               Navigator.pushNamed(context, Routes.login);
                             },
                             child: Text(
-                              'sign in'.tr(),
+                              LocaleKeys.signIn.tr(),
                               style: Theme.of(context)
                                   .textTheme
                                   .titleMedium!

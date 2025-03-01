@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
         debugShowCheckedModeBanner: false,
         theme: AppTheme.lightTheme(context),
         onGenerateRoute: RouteGenerator.getRoute,
-        initialRoute: Routes.home,
+        initialRoute: Routes.login,
       ),
     );
   }

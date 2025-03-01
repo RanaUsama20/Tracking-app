@@ -1,9 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:injectable/injectable.dart';
-import 'package:tracking_app/core/network/remote/api_manager.dart';
-import 'package:tracking_app/core/network/remote/httpManager.dart';
 import 'package:tracking_app/domain/entities/home/forecast_entity.dart';
-
 import '../../../../core/location/location_services.dart';
 import '../../../../domain/use_case/home/weather_decision_usecase.dart';
 import '../../../../domain/use_case/home/weather_usecase.dart';

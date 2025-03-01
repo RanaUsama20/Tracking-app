@@ -17,6 +17,7 @@ class AppTheme {
             fontSize: FontSize.s20,
             fontFamily: AppConstants.inter,
             context: context,
+
           ),
         ),
     textTheme: TextTheme(

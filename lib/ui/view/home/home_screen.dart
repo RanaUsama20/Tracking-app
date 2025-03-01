@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -7,6 +8,7 @@ import 'package:tracking_app/core/utils/ui_utils.dart';
 import 'package:tracking_app/ui/view/home/weather_detail_widget.dart';
 import 'package:tracking_app/ui/view/home/weather_forecast_widget.dart';
 
+import '../../../generated/locale_keys.g.dart';
 import '../../view_model/cubit/home/home_cubit.dart';
 import '../../view_model/cubit/home/home_states.dart';
 import 'Prediction_widget.dart';
@@ -25,7 +27,7 @@ class _HomeScreenState extends State<HomeScreen> {
     return BlocProvider<HomeCubit>(
       create: (context) => cubit..fetchWeatherData(),
       child: Scaffold(
-        appBar: AppBar(title: Text('Weather Forecast')),
+        appBar: AppBar(title: Text(LocaleKeys.weatherForecast.tr())),
         body: Padding(
           padding: const EdgeInsets.all(8.0),
           child: BlocConsumer<HomeCubit, HomeStates>(
