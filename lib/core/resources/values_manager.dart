@@ -16,8 +16,8 @@ abstract class AppConstants {
   static const String roboto = 'Roboto';
   static const String inter = 'Inter';
   static const String pathTranslation = "assets/translations";
-  static const Locale arabicLocale = Locale("ar", "EG");
-  static const Locale englishLocale = Locale("en", "US");
+  static const Locale arabicLocale = Locale("ar");
+  static const Locale englishLocale = Locale("en");
   static const List<Locale> supportedLocales = [englishLocale, arabicLocale];
 }
 
