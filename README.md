@@ -36,8 +36,8 @@ The app follows the **Clean Architecture** principles to ensure separation of co
 ## 📥 Installation Guide
 1. **Clone the repository:**
    ```sh
-   git clone https://github.com/yourusername/weather-app.git
-   cd weather-app
+   git clone https://github.com/RanaUsama20/Tracking-app.git
+   cd Tracking-app
    ```
 2. **Install dependencies:**
    ```sh
@@ -49,12 +49,12 @@ The app follows the **Clean Architecture** principles to ensure separation of co
    ```
 4. **Run the Flask backend (AI Model):**
    ```sh
-   cd backend
+   .\venv\Scripts\Activate
    python app.py
    ```
 
 ## 📡 API Endpoints
-- **Weather Data API** (e.g., OpenWeather API, WeatherAPI, etc.)
+- **Weather Data API** ( WeatherAPI )
 - **AI Prediction API** (`/predict`) – Returns a suggestion based on weather conditions
 
 ## Demo 
