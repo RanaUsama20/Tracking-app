@@ -29,7 +29,7 @@ The app follows the **Clean Architecture** principles to ensure separation of co
 - **Flutter** – UI framework
 - **Cubit** – State management
 - **Dio** – API calls
-- **Geolocator** – For location services
+- **Location** – For location services
 - **Flask** – AI Model backend
 - **REST API** – Weather data retrieval
 
