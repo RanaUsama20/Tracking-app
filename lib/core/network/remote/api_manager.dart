@@ -4,7 +4,7 @@ import 'package:tracking_app/core/network/errors/exceptions.dart';
 import 'package:tracking_app/core/network/remote/api_constants.dart';
 import 'api_interceptors.dart';
 @injectable
-class ApiManager{
+class ApiManager {
 
   late Dio dio;
 
@@ -20,17 +20,19 @@ class ApiManager{
     dio.interceptors.add(ApiInterceptor());
   }
 
-  Future<Response> getRequest(String endpoint, {Map<String, dynamic>? params}) async {
+  Future<Response> getRequest(String endpoint,
+      {Map<String, dynamic>? params}) async {
     try {
       final response = await dio.get(endpoint, queryParameters: params);
       return response;
     }
     on DioException catch (e) {
-       ServerException.handleDioException(e);
-       rethrow;
+      ServerException.handleDioException(e);
+      rethrow;
     }
     catch (e) {
       throw RemoteException("Dio Error: $e");
     }
   }
+
 }

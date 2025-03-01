@@ -2,6 +2,7 @@
 import 'package:dio/dio.dart';
 import 'package:injectable/injectable.dart';
 import 'package:tracking_app/core/network/errors/error_model.dart';
+import 'package:tracking_app/core/network/remote/httpManager.dart';
 import 'package:tracking_app/data/models/home/ForecastResponse.dart';
 import 'package:tracking_app/domain/entities/home/forecast_entity.dart';
 import '../../../../core/network/errors/exceptions.dart';
@@ -10,12 +11,15 @@ import '../../../../core/network/remote/api_manager.dart';
 
 abstract class HomeRemoteDataSource {
   Future<ForecastResponseEntity> fetchWeatherData(double latitude, double longitude);
+  Future<List<int>?> getPrediction(List<int> features);
 }
 @Injectable(as: HomeRemoteDataSource)
 class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
   final ApiManager apiManager;
+  final HttpManager httpManager;
 
-  HomeRemoteDataSourceImpl(this.apiManager);
+
+  HomeRemoteDataSourceImpl(this.apiManager,this.httpManager);
 
   @override
   Future<ForecastResponseEntity> fetchWeatherData(double latitude, double longitude) async {
@@ -36,7 +40,10 @@ class HomeRemoteDataSourceImpl implements HomeRemoteDataSource {
     }
   }
 
-
+  @override
+  Future<List<int>?> getPrediction(List<int> features) async {
+    return await httpManager.getPrediction(features);
+  }
 
 
 }

@@ -85,4 +85,24 @@ class UiUtils {
         fontSize: FontSize.s16,
         fontAsset: AppConstants.inter,
       );
+
+  static void showPredictionDialog(BuildContext context, List<int> prediction, void Function()? onPressed  ) {
+    String message = prediction[0] == 1 ? "The weather is good, you can go out today!" : "The weather is bad, i don't recommend going out today!";
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text("Prediction Result"),
+          content: Text(message),
+          actions: [
+            TextButton(
+              onPressed: onPressed,
+              child: Text("OK"),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
 }

@@ -26,13 +26,15 @@ class HomeWeatherSuccess extends HomeStates {
  }
 }
 
+class HomePredictionSuccess extends HomeStates {
+ final List<int> prediction;
+ HomePredictionSuccess(this.prediction);
+}
 
 class HomeFailure extends HomeStates {
  final String error;
  HomeFailure(this.error);
 }
-
-
 
 class HomeLocationUpdated extends HomeStates {
  final double latitude;

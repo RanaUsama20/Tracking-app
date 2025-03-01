@@ -23,4 +23,15 @@ class WeatherRepositoryImpl implements WeatherRepository {
       return Left(Failure());
     }
   }
+
+  @override
+  Future<Either<Failure, List<int>?>> getPrediction(List<int> features) async {
+    try {
+      final result = await remoteDataSource.getPrediction(features);
+      return Right(result);
+    } catch (e) {
+      return Left(Failure());
+    }
+  }
 }
+
