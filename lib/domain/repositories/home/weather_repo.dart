@@ -5,4 +5,6 @@ import '../../../core/network/errors/failure.dart';
 
 abstract class WeatherRepository {
   Future<Either<Failure, ForecastResponseEntity>> fetchWeatherData(double latitude, double longitude);
+  Future<Either<Failure, List<int>?>> getPrediction(List<int> features);
+
 }

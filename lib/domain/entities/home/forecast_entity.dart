@@ -8,6 +8,23 @@ class ForecastResponseEntity {
   LocationEntity? location;
   CurrentEntity? current;
   ForecastEntity? forecast;
+
+  List<int> getFeatures() {
+    if (forecast?.forecastday == null || forecast!.forecastday!.isEmpty) {
+      return [0, 0, 0, 0, 0];
+    }
+
+    final DayEntity? today = forecast!.forecastday!.first.day;
+    if (today == null) return [0, 0, 0, 0, 0];
+
+    return [
+      today.condition?.text?.toLowerCase().contains("rain") == true ? 1 : 0,
+      today.condition?.text?.toLowerCase().contains("sunny") == true ? 1 : 0,
+      today.maxtempC != null && today.maxtempC! > 30 ? 1 : 0,
+      today.maxtempC != null && (today.maxtempC! >= 20 && today.maxtempC! <= 30) ? 1 : 0,
+      today.avghumidity != null && today.avghumidity! < 60 ? 1 : 0,
+    ];
+  }
 }
 
 class ForecastEntity {
@@ -211,3 +228,6 @@ class HourEntity {
   double? tempC;
   double? tempF;
 }
+
+
+

@@ -1,7 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_app/core/resources/color_manager.dart';
+import 'package:tracking_app/generated/locale_keys.g.dart';
 import 'package:tracking_app/ui/view_model/cubit/home/home_cubit.dart';
 import 'package:tracking_app/ui/view_model/cubit/home/home_states.dart';
 
@@ -28,7 +30,7 @@ class WeatherForecastWidget extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Column(
             children: [
-              Text('3-Days Forecasts',
+              Text(LocaleKeys.DaysForecast.tr(),
                   style: Theme.of(context)
                       .textTheme
                       .titleLarge!

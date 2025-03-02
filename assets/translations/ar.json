@@ -1,3 +1,20 @@
 {
-
+  "signIn": "تسجيل الدخول",
+  "email": "البريد الإلكتروني",
+  "enterYourEmail": "أدخل بريدك الإلكتروني",
+  "password": "كلمة المرور",
+  "enterYourPassword": "أدخل كلمة المرور",
+  "noAccount": "ليس لديك حساب؟",
+  "signUp": "إنشاء حساب",
+  "name": "الاسم",
+  "enterYourName": "أدخل اسمك",
+  "confirmPassword": "تأكيد كلمة المرور",
+  "age": "العمر",
+  "enterYourAge": "أدخل عمرك",
+  "phoneNumber": "رقم الهاتف",
+  "enterYourPhoneNumber": "أدخل رقم هاتفك",
+  "haveAnAccount": "هل لديك حساب بالفعل؟",
+  "weatherForecast": "توقعات الطقس",
+  "getPrediction": "احصل على التوقعات",
+  "DaysForecast": "توقعات الطقس لثلاثة أيام"
 }

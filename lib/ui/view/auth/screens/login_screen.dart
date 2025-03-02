@@ -10,6 +10,7 @@ import '../../../../core/widgets/custom_button.dart';
 import '../../../../core/widgets/custom_text_form_field.dart';
 import '../../../../domain/use_case/auth/login_usecase.dart';
 import '../../../../domain/use_case/auth/register_usecase.dart';
+import '../../../../generated/locale_keys.g.dart';
 import '../../../view_model/cubit/auth/auth_cubit.dart';
 import '../../../view_model/cubit/auth/auth_states.dart';
 
@@ -51,7 +52,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     children: [
                       SizedBox(height: 100.h),
                       Text(
-                        'Sign in'.tr(),
+                        LocaleKeys.signIn.tr(),
                         style: Theme.of(context).textTheme.titleLarge,
                         textAlign: TextAlign.center,
                       ),
@@ -62,10 +63,10 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               CustomTextFormField(
                                 controller: _emailController,
-                                label: 'Email'.tr(),
+                                label: LocaleKeys.email.tr(),
                                 labelTextStyle:
                                     Theme.of(context).textTheme.titleSmall,
-                                hint: 'Enter your email'.tr(),
+                                hint: LocaleKeys.enterYourEmail.tr(),
                                 hintTextStyle:
                                     Theme.of(context).textTheme.titleSmall,
                                 validation: (val) =>
@@ -78,10 +79,10 @@ class _LoginScreenState extends State<LoginScreen> {
                               ),
                               CustomTextFormField(
                                 controller: _passwordController,
-                                label: 'Password'.tr(),
+                                label: LocaleKeys.password.tr(),
                                 labelTextStyle:
                                     Theme.of(context).textTheme.titleSmall,
-                                hint: 'Enter your password'.tr(),
+                                hint: LocaleKeys.enterYourPassword.tr(),
                                 hintTextStyle:
                                     Theme.of(context).textTheme.titleSmall,
                                 isObscured: true,
@@ -98,7 +99,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       Padding(
                         padding: EdgeInsets.all(10),
                         child: CustomButton(
-                            label: 'sign in'.tr(),
+                            label: LocaleKeys.signIn.tr(),
                             onTap: () {
                               if (_formKey.currentState!.validate()) {
                                 cubit.login(_emailController.text,
@@ -112,7 +113,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              "Don't have an account?  ".tr(),
+                              LocaleKeys.noAccount.tr(),
                               style: Theme.of(context).textTheme.titleMedium,
                             ),
                             InkWell(
@@ -120,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                 Navigator.pushNamed(context, Routes.register);
                               },
                               child: Text(
-                                'sign up'.tr(),
+                                LocaleKeys.signUp.tr(),
                                 style: Theme.of(context)
                                     .textTheme
                                     .titleMedium!

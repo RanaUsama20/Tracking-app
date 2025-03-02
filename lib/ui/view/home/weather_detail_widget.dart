@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:tracking_app/ui/components/weather_details_card.dart';
-
-
-import '../../../data/models/home/ForecastResponse.dart';
 import '../../../domain/entities/home/forecast_entity.dart';
 
 class WeatherDetailWidget extends StatelessWidget {

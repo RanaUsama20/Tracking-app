@@ -1,3 +1,20 @@
 {
-
+  "signIn": "Sign in",
+  "email": "Email",
+  "enterYourEmail": "Enter your email",
+  "password": "Password",
+  "enterYourPassword": "Enter your password",
+  "noAccount": "Don't have an account?",
+  "signUp": "Sign up",
+  "name": "Name",
+  "enterYourName": "Enter your Name",
+  "confirmPassword": "Confirm password",
+  "age": "Age",
+  "enterYourAge": "Enter your Age",
+  "phoneNumber": "Phone number",
+  "enterYourPhoneNumber": "Enter your Phone number",
+  "haveAnAccount": "Already have an account?",
+  "weatherForecast": "Weather Forecast",
+  "getPrediction" : "Get Prediction",
+  "DaysForecast" : "3-Days Forecasts"
 }
